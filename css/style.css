@@ -1,0 +1,945 @@
+/* Imports */
+/* Icons */
+@import url("https://use.fontawesome.com/releases/v5.14.0/css/all.css");
+@import url("https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* General Styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+::selection {
+  color: red;
+  background: var(--color-primary);
+}
+
+a {
+  display: inline-block;
+  color: #000;
+  transition: all 300ms ease-in-out;
+}
+
+a:hover,
+a.active {
+  color: var(--color-primary);
+}
+
+i[class^="bx"] {
+  vertical-align: middle;
+}
+
+ul,
+address {
+  margin-bottom: 0;
+}
+
+.imgFluid {
+  max-width: 100%;
+}
+
+.primary-color {
+  color: var(--color-primary);
+}
+
+.section-content .subHeading {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-content .heading {
+  font-size: 3.25rem;
+  line-height: 1.1;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section-content p {
+  color: #666;
+  line-height: 2;
+}
+
+.section-content span {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.themeBtn {
+  width: fit-content;
+  display: block;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #000;
+  padding: 0.75rem 2rem;
+  margin: 0.25rem 0;
+  transition: all 300ms ease-in-out;
+}
+
+.themeBtn--full {
+  width: 100%;
+}
+
+.themeBtn--center {
+  margin: 0.25rem auto;
+}
+
+.themeBtn:hover {
+  color: #fff;
+  background: var(--color-primary);
+  border-color: #fff;
+  transform: translateY(-5px);
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1370px;
+  }
+}
+
+.nav-logo {
+  padding: 20px 40px 20px;
+}
+
+.nav-items ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-weight: 500;
+  justify-content: center;
+}
+
+.header_nav {
+  /* padding-top: 30px; */
+  /* padding-bottom: 30px; */
+  text-align: center;
+  font-size: 14px;
+  padding: 30px 0px 30px 0px;
+}
+
+.Header_btn ul {
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+  font-weight: 600;
+  padding: 30px 40px 30px 0px;
+}
+
+.nav-items ul li:nth-child(1) a {
+  color: #c91920;
+  position: relative;
+}
+
+.nav-items ul li:nth-child(1) a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #c91920;
+  bottom: -2px;
+  left: 20px;
+}
+
+.nav-items ul li a {
+  position: relative;
+}
+
+.nav-items ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  transition: all 0.6s ease;
+  height: 3px;
+  background: #c91920;
+  bottom: -2px;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%);
+}
+
+.nav-items ul li a:hover:before {
+  width: 100%;
+  color: red;
+}
+
+.nav-items ul li a:hover {
+  color: #c91920;
+  transition: all 0.3s ease;
+}
+
+.Header_btn ul li a:hover {
+  color: #c91920;
+  transition: 0.4s ease;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  color: white;
+}
+
+.banner-text-01 h3 {
+  padding: 15px 0px 10px 0px;
+}
+
+.banner-text-01 {
+  padding-left: 180px;
+  background: transparent;
+  color: white;
+  position: absolute;
+  line-height: 1.159;
+  top: 130px;
+}
+
+.banner-text-01 p {
+  font-size: 16px;
+  padding: 20px 0px 10px 0px;
+  line-height: 1.899;
+}
+
+.banner-txt-img {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 110px 0px 5px 0px;
+  justify-content: flex-start;
+}
+
+.banner-txt-img img {
+  width: 45%;
+}
+
+.banner-text-01 a {
+  border: 1px solid #c91920;
+  background-color: #c91920;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  padding: 12px 35px;
+  border-radius: 75px;
+}
+
+.Services {
+  padding: 117px 75px 80px;
+}
+
+.services_head {
+  text-align: center;
+  position: relative;
+}
+
+.services_head h5 {
+  color: #c91920;
+  font-weight: 700;
+  line-height: 0;
+}
+
+.services_head h1 {
+  color: black;
+  font-weight: 800;
+  padding: 0px 0px 50px;
+}
+
+.service01 {
+  text-align: left;
+  border-right: 2px solid #00000029;
+  padding: 0 0 55px 0;
+  cursor: pointer;
+}
+
+.services_head::before {
+  content: "";
+  position: absolute;
+  background: #00000029;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -300px;
+}
+
+.service01 img {
+  margin-bottom: 20px;
+}
+
+.service02 img {
+  margin-bottom: 20px;
+}
+
+.service01 h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.service02 h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.service01 p {
+  font-size: 14px;
+}
+
+.service02 p {
+  font-size: 14px;
+}
+
+.service01 a {
+  color: #c91920;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.6s ease;
+}
+
+.service02 a {
+  color: #c91920;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.6s ease;
+}
+
+.certi {
+  background: url(../images/LTC\ classes\ pic.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 90px 0px 80px;
+}
+
+.certi-detail {
+  color: white;
+  text-align: center;
+}
+
+.certi-detail p {
+  font-size: 14px;
+  line-height: 1.899;
+}
+
+.certi-detail a {
+  border: 1px solid white;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  padding: 10px 35px;
+  border-radius: 75px;
+}
+
+.footer-logo img {
+  width: 200px;
+}
+
+.footer-logo P {
+  font-size: 13px;
+  padding-top: 25px;
+  padding-right: 60px;
+  color: white;
+  line-height: 1.999;
+}
+
+.footer-nav {
+  padding: 80px 82px 0px 0px;
+  color: white;
+}
+
+.footer-nav ul li {
+  margin: 0px 0px 10px;
+  font-size: 14px;
+}
+
+.footer-nav h4 {
+  margin: 0px 0px 25px;
+}
+
+.footer-links {
+  color: white;
+}
+
+.footer-links ul li {
+  margin: 0px 0px 10px;
+  font-size: 12px;
+  transition: all 0.6s ease;
+}
+
+.footer-links h4 {
+  margin: 0px 0px 25px;
+}
+
+.contact_info h4 {
+  margin: 0px 0px 25px;
+}
+
+.contact_info {
+  color: white;
+}
+
+.contact_info ul li {
+  display: flex;
+  gap: 9px;
+}
+
+.contact_info ul li span i {
+  color: #ea8519;
+}
+
+.footer_copyright {
+  color: white;
+  width: 100%;
+  position: relative;
+  display: flex;
+  text-align: center;
+  padding: 25px 0px 0px 0px;
+}
+
+.footer_copyright::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #c91920;
+  top: 10px;
+  left: 0;
+}
+
+.footer_copyright ul {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.footer_copyright p {
+  width: 60%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer_copyright ul li i {
+  color: white;
+}
+
+.footer-img {
+  background: url(../images/footer\ image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px 0px 20px 0px;
+}
+
+.contact_info a {
+  border: 1px solid white;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  width: 50%;
+  padding: 10px 0px 10px 0px;
+  border-radius: 75px;
+}
+
+.contact_info p {
+  font-size: 13px;
+  line-height: 1.899;
+}
+
+.service01:hover img {
+  filter: drop-shadow(2px 6px 6px #c91920);
+  transition: all 0.6s ease;
+}
+
+.service02:hover img {
+  filter: drop-shadow(2px 6px 6px red);
+  transition: all 0.6s ease;
+}
+
+.service01:hover a {
+  color: black;
+}
+
+.service02:hover a {
+  color: black;
+}
+
+.service01 span {
+  transition: all 0.6s ease;
+}
+
+.service01:hover a span {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.service02 span {
+  transition: all 0.6s ease;
+}
+
+.service02:hover a span {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.certi-detail a:hover {
+  background: white;
+  color: #c91920;
+}
+
+.contact_info a:hover {
+  background: #c91920;
+  color: white;
+  border: 1px solid transparent;
+}
+
+.footer_copyright ul li {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.footer_copyright ul li:hover {
+  border: 1px solid transparent;
+  background: #c91920;
+}
+
+.banner-text-01 a:hover {
+  border: 1px solid #c91920;
+  background: transparent;
+}
+
+/* nav-bar-css-begin */
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+.nav_btn {
+  position: absolute !important;
+  z-index: 9 !important;
+  right: 30px !important;
+  top: 25px !important;
+  display: none;
+}
+
+.footer-links ul li a {
+  color: white;
+  font-family: 'Poppins';
+}
+
+.footer-links ul li a:hover {
+  color: #c91920;
+}
+
+
+
+
+/* responsive begin */
+
+@media only screen and (max-width: 1024px) {
+  .nav-logo img {
+    width: 100%;
+  }
+
+  .nav-logo {
+    padding: 30px 40px 20px;
+  }
+
+  .nav-items ul {
+    gap: 20px;
+  }
+
+  .banner-text-01 {
+    padding-left: 100px;
+  }
+
+  .banner-txt-img {
+    padding: 60px 0px 5px 0px;
+  }
+
+  .banner-text-01 p {
+    font-size: 14px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  .service01 h4 {
+    font-size: 21px;
+  }
+
+  .services_head::before {
+    bottom: -370px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header_nav {
+    display: none;
+  }
+
+  .nav_btn {
+    display: block;
+  }
+
+  .Header_btn ul {
+    display: none;
+  }
+
+  .login_btn ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    font-weight: 600;
+    text-align: center;
+    padding: 21px 27px;
+  }
+
+  .login_btn ul li a {
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    padding: 6px 0px;
+    width: 110px;
+  }
+
+  .login_btn ul li a:hover {
+    color: #c91920;
+    background: white;
+  }
+
+  img.ct-banner-img {
+    min-height: 120vh;
+  }
+
+  .banner-text-01 {
+    padding: 0px 15px;
+    background: transparent;
+    color: white;
+    top: 10% !important;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    line-height: 1.159;
+  }
+
+  .banner-txt-img {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 120px 0px 5px 60px;
+  }
+
+  .banner-text-01 h3 {
+    padding: 20px 0px 0px 0px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .banner-text-01 p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .banner-text-01 a {
+    border: 1px solid #c91920;
+    background-color: #c91920;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 35px;
+    border-radius: 75px;
+    margin: 0 auto;
+  }
+
+  .banner-text-01 p br {
+    display: none;
+  }
+
+  .Services {
+    padding: 110px 15px 30px 15px;
+  }
+
+  .services_head::before {
+    display: none;
+  }
+
+  .service02 {
+    text-align: center;
+  }
+
+  .service01 {
+    text-align: left;
+    padding: 0px 0 50px 0;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    height: 360px;
+  }
+
+  .service01.\32 .wow.bounceInUp.center {
+    padding: 0px 0px 30px 0px;
+  }
+
+  .certi {
+    padding: 90px 4px 80px;
+  }
+
+  .certi-detail p {
+    font-size: 14px;
+    line-height: 1.399;
+  }
+
+  .certi-detail h1 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .footer-img {
+    text-align: center;
+    padding: 40px 0px 40px 0px;
+  }
+
+  .footer-logo P {
+    font-size: 12px;
+    padding: 25px 0px 0px 0px;
+    color: white;
+    text-align: left;
+    line-height: 1.699;
+    margin: 0;
+  }
+
+  .footer-links {
+    text-align: left;
+  }
+
+  .contact_info {
+    text-align: left;
+  }
+
+  .contact_info a {
+    border: 1px solid white;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 75px;
+  }
+  .footer_copyright {
+    display: flex;
+  }
+
+  .footer_copyright ul {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    text-align: right;
+    padding: 10px 30px 0px 0px;
+    align-content: space-around;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .footer_copyright p {
+    width: 100%;
+    padding: 10px 0px 0px 5px;
+    margin: 0;
+    display: flex;
+    align-content: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .footer_copyright::before {
+    display: none;
+  }
+
+  .nav-logo img {
+    width: 150px;
+  }
+
+  .nav-logo {
+    padding: 15px 0px 15px;
+  }
+
+  .nav_btn {
+    position: absolute !important;
+    z-index: 9 !important;
+    right: 10px !important;
+    top: 13px !important;
+  }
+
+  .openbtn {
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #c91920;
+    color: white;
+    padding: 10px 10px;
+    font-family: "Poppins";
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+  }
+
+  .sidebar {
+    background-color: #c91920;
+    color: white;
+  }
+
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    display: block;
+    transition: all 0.6s ease;
+  }
+
+  .sidebar a:hover {
+    background: white;
+    color: #c91920;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .banner-txt-img {
+    gap: 20px;
+    padding: 120px 0px 5px 20px;
+  }
+
+  .service01 {
+    height: 100%;
+  }
+
+  .service01.\32 .wow.bounceInUp.center {
+    padding: 40px 0px 40px 0px;
+  }
+
+  .footer-logo P {
+    font-size: 12px;
+    padding: 25px 0px 20px 0px;
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+    padding: 10px 0px;
+  }
+
+  .footer-links ul li {
+    font-size: 12px;
+  }
+
+  .footer-links h4 {
+    margin: 0px 0px 20px;
+  }
+
+  .contact_info {
+    text-align: center;
+    padding: 20px 0px;
+  }
+
+  .contact_info h4 {
+    margin: 0px 0px 20px;
+  }
+
+  .footer_copyright p {
+    padding: 11px 0px 20px 0px;
+    text-align: center;
+    display: block;
+  }
+
+  .footer_copyright {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_copyright ul {
+    text-align: center;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 0px 0px;
+  }
+}
